@@ -6,5 +6,5 @@ string_title()
         string=$(cat <&0)
     fi
 
-    echo "${string}" | sed -E 's/\b(\w)/\u\1/g'
+    echo "${string}" | gsed -E 's/\b(\w)/\u\1/g'
 }

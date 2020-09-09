@@ -37,5 +37,5 @@ string_replace()
         string="${3}"
     fi
 
-    echo "${string}" | sed -E "s/${search}/${replace}/g"
+    echo "${string}" | gsed -E "s/${search}/${replace}/g"
 }

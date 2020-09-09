@@ -6,5 +6,5 @@ string_lower()
         string=$(cat <&0)
     fi
 
-    echo "${string}" | sed -E 's/(\w)/\l\1/g'
+    echo "${string}" | gsed -E 's/(\w)/\l\1/g'
 }

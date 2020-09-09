@@ -1,3 +1,3 @@
 while read filename; do
-    source "$(dirname "${BASH_SOURCE}")/${filename}"
-done < <(find src -name '*.bash')
+    source "${filename}"
+done < <(find $STRINGBASH_HOME/src -name '*.bash')

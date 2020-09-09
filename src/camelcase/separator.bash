@@ -13,8 +13,8 @@ string_camelcase_separator()
         string=$(cat <&0)
     fi
 
-    separator=$(string_escape --type regex "${1}" | sed 's#/#\\/#g')
+    separator=$(string_escape --type regex "${1}" | gsed 's#/#\\/#g')
     pattern="s/([A-Za-z0-9])([A-Z])/\1${separator}\2/g"
 
-    echo "${string}" | sed -E "${pattern}" | sed -E "${pattern}"
+    echo "${string}" | gsed -E "${pattern}" | gsed -E "${pattern}"
 }

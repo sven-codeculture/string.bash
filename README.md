@@ -1,12 +1,15 @@
 # String
-[![Build Status](https://travis-ci.org/henriquemoody/string.bash.png?branch=master)](https://travis-ci.org/henriquemoody/string.bash)
+Fork of henriquemoody/string.bash for OSX
 
-Strings handler written in Bash.
+## Requirements
+
+GNU Sed installed in system and available as gsed (`brew install gsed`)
 
 ## Using it
 
 ````bash
-source path/to/string/source.bash
+export STRINGBASH_HOME=$HOME/path/to/string
+source $STRINGBASH_HOME/source.bash
 
 awk -F : '{print $5}' /etc/passwd |
     string_title

@@ -12,7 +12,7 @@ string_separator_camelcase()
         string=$(cat <&0)
     fi
 
-    separator=$(string_escape --type regex "${1}" | sed 's#/#\\/#g')
+    separator=$(string_escape --type regex "${1}" | gsed 's#/#\\/#g')
 
-    echo "${string}" | sed -E "s/${separator}(\w)/\u\1/g"
+    echo "${string}" | gsed -E "s/${separator}(\w)/\u\1/g"
 }

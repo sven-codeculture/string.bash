@@ -29,5 +29,5 @@ string_escape()
         string="${1}"
     fi
 
-    echo "${string}" | sed -E "s/([${chars}])/\\\\\1/g"
+    echo "${string}" | gsed -E "s/([${chars}])/\\\\\1/g"
 }

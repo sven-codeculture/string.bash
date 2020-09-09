@@ -6,5 +6,5 @@ string_upper()
         string=$(cat <&0)
     fi
 
-    echo "${string}" | sed -E 's/(\w)/\u\1/g'
+    echo "${string}" | gsed -E 's/(\w)/\u\1/g'
 }
